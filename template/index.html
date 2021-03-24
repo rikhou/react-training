@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src='./parseTemplate.js'></script>
+</head>
+
+<body>
+  <div id='root'></div>
+  <script id="template" type="text/html">
+    <div class="history">
+      <span class="history-title">Access History</span>
+      <ul class="history-content" id="history">
+            <% for(var index in history) { %>
+                  <li class="file"><%=history[index].name%></li>
+            <% } %>
+      </ul>
+    </div>
+  </script>
+
+  <script>
+    const history = [{
+      "name": "server02"
+    },
+    {
+      "name": "server03"
+    },
+    {
+      "name": "server04"
+    },
+    {
+      "name": "server05"
+    },
+    {
+      "name": "server06"
+    },
+    {
+      "name": "server07"
+    }]
+
+    var str = document.querySelector('#template').innerHTML;
+    var result = parseTemplate(str, history);
+    document.querySelector('#root').innerHTML = result;
+  </script>
+</body>
+
+</html>

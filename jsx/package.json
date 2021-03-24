@@ -1,0 +1,13 @@
+{
+  "name": "jsx-demo",
+  "version": "0.0.1",
+  "description": "jsx-demo",
+  "scripts": {
+    "start": "parcel ./index.html"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <user-card 
+    image="https://semantic-ui.com/images/avatar2/large/kristy.png" 
+    name="Zeo"
+    email="zeo@some-email.com">
+  </user-card>
+
+  <user-card 
+    image="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1261452955,3122889928&fm=26&gp=0.jpg" 
+    name="John"
+    email="John@some-email.com">
+  </user-card>
+
+  <template id="userCardTemplate">
+    <style>
+      :host {
+        display: flex;
+        align-items: center;
+        width: 450px;
+        height: 180px;
+        background-color: #d4d4d4;
+        border: 1px solid #d5d5d5;
+        margin: 10px;
+      }
+
+      .image {
+        flex: 0 0 auto;
+        width: 160px;
+        height: 160px;
+      }
+
+      .container {
+        box-sizing: border-box;
+        padding: 20px;
+        height: 160px;
+      }
+    </style>
+
+    <img class="image">
+    <div class="container">
+      <p class="name"></p>
+      <p class="email"></p>
+      <button class="button">Follow John</button>
+    </div>
+  </template>
+  <script src="UserCard.js"></script>
+</body>
+
+</html>

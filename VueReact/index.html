@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React & Vue</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div id="vue">
+            <h1>Vue：{{saying}}</h1>
+        </div>
+        <div id="react"></div>
+        <div>
+            <h3>......</h3>
+            <h3>只要人人都献出一点爱</h3>
+            <h3>世界将变成美好的人间</h3>
+            <h3>......</h3>
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=958307218,98387217&fm=26&gp=0.jpg">
+        </div>
+    </div>
+    <script>
+        var demo = new Vue({
+            el: '#vue',
+            data: {
+                saying: '你瞅啥？',
+            }
+        });
+    </script>
+    <script type="text/babel">
+        function Saying({ word }) {
+            return (<h1>React：{word}</h1>)
+        }
+        const root = <Saying word="瞅你咋地！" />;
+        ReactDOM.render(root, document.getElementById('react'));
+    </script>
+</body>
+
+</html>
